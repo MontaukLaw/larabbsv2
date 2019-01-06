@@ -12,11 +12,11 @@ class UsersController extends Controller
     public function __construct()
     {
         $this->middleware('auth', [
-            'except' => ['show', 'create', 'store', 'index','confirmEmail']
+            'except' => ['show', 'store', 'index', 'confirmEmail', 'signup']
         ]);
 
         $this->middleware('guest', [
-            'only' => ['create']
+            'only' => ['signup']
         ]);
     }
 
@@ -26,6 +26,7 @@ class UsersController extends Controller
         return view('users.index', compact('users'));
     }
 
+    //signup即create方法
     public function signup()
     {
         return view('users.signup');
@@ -63,13 +64,13 @@ class UsersController extends Controller
     {
         $view = 'emails.confirm';
         $data = compact('user');
-        $from = 'summer@example.com';
-        $name = 'Summer';
+        //$from = 'summer@example.com';
+        //$name = 'Summer';
         $to = $user->email;
         $subject = "感谢注册 Weibo 应用！请确认你的邮箱。";
 
-        Mail::send($view, $data, function ($message) use ($from, $name, $to, $subject) {
-            $message->from($from, $name)->to($to)->subject($subject);
+        Mail::send($view, $data, function ($message) use ($to, $subject) {
+            $message->to($to)->subject($subject);
         });
     }
 
@@ -98,5 +99,17 @@ class UsersController extends Controller
         $user->delete();
         session()->flash('success', '成功删除用户！');
         return back();
+    }
+
+    public function confirmEmail($token)
+    {
+        $user = User::where('activation_token', $token)->firstOrFail();
+        $user->activated = true;
+        $user->activation_token = null;
+        $user->save();
+        Auth::login($user);
+        session()->flash('success', '恭喜你，激活成功！');
+        return redirect()->route('users.show', [$user]);
+
     }
 }

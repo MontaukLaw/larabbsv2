@@ -41,8 +41,7 @@ class SessionsController extends Controller
         }
     }
 
-    public
-    function destroy()
+    public function destroy()
     {
         Auth::logout();
         session()->flash('success', '拜拜！');
