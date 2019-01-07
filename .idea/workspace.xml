@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8da645c0-7ead-4fb1-a2bb-01e95a7d0867" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/articles/_article.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/_article.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +31,7 @@
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="2" />
           <entry key="Log" value="1" />
-          <entry key="PHP" value="77" />
+          <entry key="PHP" value="80" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="SCSS" value="3" />
           <entry key="yarn.lock" value="1" />
@@ -46,7 +42,7 @@
           <entry key=".env file" value="15" />
           <entry key="Blade" value="354" />
           <entry key="JavaScript" value="8" />
-          <entry key="PHP" value="16990" />
+          <entry key="PHP" value="17007" />
           <entry key="SCSS" value="15" />
         </counts>
       </usages-collector>
@@ -63,7 +59,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="141">
@@ -71,6 +67,33 @@
               <folding>
                 <element signature="e#40#63#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_07_074003_create_followers_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="589">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Models/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="617">
+              <caret line="82" column="34" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_06_081423_create_articles_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -88,7 +111,7 @@
         <entry file="file://$PROJECT_DIR$/database/seeds/ArticlesTableSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="361">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="e#7#38#0#PHP" expanded="true" />
               </folding>
@@ -141,7 +164,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/layouts/_header.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/_footer.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/users/signup.php" />
         <option value="$PROJECT_DIR$/app/Http/Models/User.php" />
@@ -183,7 +205,6 @@
         <option value="$PROJECT_DIR$/app/Models/Article.php" />
         <option value="$PROJECT_DIR$/resources/views/shared/_article_form.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
-        <option value="$PROJECT_DIR$/app/Models/User.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/StaticPagesController.php" />
         <option value="$PROJECT_DIR$/resources/views/shared/_feed.blade.php" />
         <option value="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" />
@@ -192,6 +213,8 @@
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/articles/_article.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_01_07_074003_create_followers_table.php" />
+        <option value="$PROJECT_DIR$/app/Models/User.php" />
       </list>
     </option>
   </component>
@@ -539,7 +562,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64648000" />
+    <option name="totallyTimeSpent" value="67082000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1018" y="0" width="1537" height="1047" extended-state="0" />
@@ -600,13 +623,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/users/signup.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/users/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -762,13 +778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_06_081423_create_articles_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -842,13 +851,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="35" column="37" lean-forward="true" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -941,7 +943,7 @@
     <entry file="file://$PROJECT_DIR$/database/seeds/ArticlesTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="e#7#38#0#PHP" expanded="true" />
           </folding>
@@ -972,6 +974,27 @@
           <folding>
             <element signature="e#40#63#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_06_081423_create_articles_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_07_074003_create_followers_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="617">
+          <caret line="82" column="34" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
         </state>
       </provider>
     </entry>
