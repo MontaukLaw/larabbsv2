@@ -42,8 +42,14 @@ class User extends Authenticatable
         return "http://www.gravatar.com/avatar/$hash?s=$size";
     }
 
-    public function Articles()
+    public function articles()
     {
         return $this->hasMany(Article::class);
+    }
+
+    public function feed()
+    {
+        return $this->articles()
+            ->orderBy('created_at', 'desc');
     }
 }
