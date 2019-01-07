@@ -4,8 +4,13 @@
         {{ $user->name }}
     </a>
 
+    <form action="{{ route('user.follow', $user->id) }}" method="post" class="float-right">
+        {{ csrf_field() }}
+        <button type="submit" class="btn btn-sm btn-primary ">粉Ta</button>
+    </form>
+
     @can('destroy', $user)
-        <form action="{{ route('users.destroy', $user->id) }}" method="post" class="float-right">
+        <form action="{{ route('users.destroy', $user) }}" method="post" class="float-right">
             {{ csrf_field() }}
             {{ method_field('DELETE') }}
             <button type="submit" class="btn btn-sm btn-danger delete-btn">删除</button>

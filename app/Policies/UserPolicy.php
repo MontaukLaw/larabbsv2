@@ -28,4 +28,11 @@ class UserPolicy
     {
         return $currentUser->id === $user->id || $currentUser->is_admin;
     }
+
+    public function follow(User $currentUser, User $user)
+    {
+        //自己不能关注自己
+        return $currentUser->id !== $user->id;
+        //return true;
+    }
 }

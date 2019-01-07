@@ -43,6 +43,10 @@ Route::resource('articles', 'ArticlesController', ['only' => ['create', 'store',
 Route::get('/users/{user}/followers','FollowerController@followers')->name('user.followers');
 Route::get('/users/{user}/followings','FollowerController@followings')->name('user.followings');
 
+Route::post('/users/{user}/follow','FollowerController@follow')->name('user.follow');
+Route::delete('/users/{user}/unfollow','FollowerController@unfollow')->name('user.unfollow');
+
+
 
 
 
