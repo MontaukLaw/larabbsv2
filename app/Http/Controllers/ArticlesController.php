@@ -14,11 +14,14 @@ class ArticlesController extends Controller
     }
 
     //删除
-    public function destory()
+    public function destroy(Article $article)
     {
-
-
+        $this->authorize('destroy', $article);
+        $article->delete();
+        session()->flash('success', '删除掉了哦！');
+        return redirect()->back();
     }
+
 
     public function create()
     {
