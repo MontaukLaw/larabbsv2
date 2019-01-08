@@ -48,7 +48,7 @@ class FollowerController extends Controller
             Auth::user()->unfollow($user->id);
         }
         session()->flash('success', '取关了！');
-        
+
         return redirect()->route('users.show', $user->id);
 
     }

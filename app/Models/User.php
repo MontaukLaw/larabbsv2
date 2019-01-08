@@ -49,8 +49,16 @@ class User extends Authenticatable
 
     public function feed()
     {
-        return $this->articles()
+        //这里隐藏了一个复杂的多对多的查询啊...我滴天呐...
+        //第一步, 查询所有这个粉这个用户的其他用户的id
+        $user_ids = $this->followings->pluck('id')->toArray();
+        //把当前用户就是自己的id也加进去
+        array_push($user_ids, $this->id);
+        //whereIn是User的User->articles反过来表达, with的含义是把user放进去, 预加载
+        return Article::whereIn('user_id', $user_ids)
+            ->with('user')
             ->orderBy('created_at', 'desc');
+        //return $this->articles()->orderBy('created_at', 'desc');
     }
 
     public function followers()
@@ -65,7 +73,7 @@ class User extends Authenticatable
 
     public function follow($user_ids)
     {
-        if ( ! is_array($user_ids)) {
+        if (!is_array($user_ids)) {
             $user_ids = compact('user_ids');
         }
         $this->followings()->sync($user_ids, false);
@@ -73,7 +81,7 @@ class User extends Authenticatable
 
     public function unfollow($user_ids)
     {
-        if ( ! is_array($user_ids)) {
+        if (!is_array($user_ids)) {
             $user_ids = compact('user_ids');
         }
         $this->followings()->detach($user_ids);
